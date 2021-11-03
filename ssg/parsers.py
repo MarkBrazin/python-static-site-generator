@@ -10,6 +10,6 @@ class Parser:
     
     def read(self,path):
         with open(path,'r') as file:
-            return read(file)
+            return self.read(file)
 
         
