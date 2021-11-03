@@ -30,5 +30,5 @@ class Parser:
 class ResourceParser:
  extensions  =   [".jpg",".png",".gif",".css",".html"]
 def parse(self, path, source, dest):
-        shutil.copy(path,source,dest)
+       shutil.copy(path,source,dest)
          
