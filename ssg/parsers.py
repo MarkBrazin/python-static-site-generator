@@ -19,5 +19,5 @@ class Parser:
         
         full_path   =   dest / path.with_suffix(ext).name
         with open(full_path,'w') as file:
-            write(content) in file
+            file.write(content)
 
