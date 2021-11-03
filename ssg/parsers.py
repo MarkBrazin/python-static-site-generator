@@ -8,7 +8,7 @@ class Parser:
         return extension in self.extensions
     
     
-    def read(path):
+    def read(self,path):
         with open(path) as file:
             return read(file)
 
