@@ -1,8 +1,9 @@
-from os import read
+from os import extsep, read
 from typing import List
 from pathlib import Path
 
 class Parser:
+
     extensions: List[str]  =  []
     def valid_extension(self,extension):
         return extension in self.extensions
@@ -12,6 +13,8 @@ class Parser:
     
     def read(self,path):
         with open(path,'r') as file:
-            return read(file)
-
-        
+            return file.read
+    
+    def write(self,path,dest,content):
+        ext =   ".html"
+        full_path   =   self.dest   /   path.with_suffix(ext).name
