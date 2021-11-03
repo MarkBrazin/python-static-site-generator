@@ -4,7 +4,5 @@ from pathlib import Path
 class Parser:
     extensions: List[str]  =  []
     def valid_extension(self,extension):
-        if extension in self.extensions:
-            return True
-        else:
-            return False
+        return extension in self.extensions
+        
