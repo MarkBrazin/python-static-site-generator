@@ -1,4 +1,4 @@
-from os import extsep, read, write
+from os import extsep, path, read, write
 from typing import List
 from pathlib import Path
 import shutil
@@ -25,3 +25,8 @@ class Parser:
 
     def copy(self,path,source,dest):
         shutil.copy2(path,dest / path.relative_to(source)   )
+class ResourceParser:
+     extensions  =   [".jpg",".png",".gif",".css","html"]
+    def parse(self, path, source, dest):
+         shutil.copy(path,source,dest)
+         
