@@ -7,7 +7,7 @@ from yaml import load, FullLoader
 
 class Content (Mapping):    
     __delimiter =   r"^(?:-|\+){3}\s*$"
-    __regex = re.compiler(__delimeter, re.MULTILINE)
+    __regex = re.compile(__delimeter, re.MULTILINE)
     @classmethod
     def load(cls,string):
         _,fm, Content   =   cls.__regex.split(string,2)
