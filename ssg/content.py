@@ -14,8 +14,8 @@ class Content (Mapping):
         metadata    =   load(fm,Loader=FullLoader  )
         return cls(metadata, content)
 
-    def __init__(self,metada,content):
-        self.data= metada
+    def __init__(self,metadata,content):
+        self.data= metadata
         self.data["content"] =   content
 
     @property
