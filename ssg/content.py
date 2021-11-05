@@ -10,9 +10,9 @@ class Content (Mapping):
     __regex = re.compile(__delimiter, re.MULTILINE)
     @classmethod
     def load(cls,string):
-        _,fm, Content   =   cls.__regex.split(string,2)
-        metadata    =   load(fm,loader=FullLoader  )
-        return cls(metadata, Content)
+        _,fm, content   =   cls.__regex.split(string,2)
+        metadata    =   load(fm,Loader=FullLoader  )
+        return cls(metadata, content)
 
     def __init__(self,metada,content):
         self.data= metada
