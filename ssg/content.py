@@ -6,7 +6,7 @@ from yaml import load, FullLoader
 
 
 class Content (Mapping):    
-    __delimeter =   r"^(?:-|\+){3}\s*$"
+    __delimiter =   r"^(?:-|\+){3}\s*$"
     __regex = re.compiler(__delimeter, re.MULTILINE)
     @classmethod
     def load(cls,string):
